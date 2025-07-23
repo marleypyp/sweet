@@ -1,0 +1,272 @@
+/* Fundo verde para a página nature.html */
+body {
+    background-color: #346008e2; /* Um tom de verde mais vibrante */
+    margin: 0;
+    background-image: url(fg.jpg) ;
+    background-size: cover;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.page-title-container{
+    border: 10px;
+    border-radius: 29px;
+}
+/* Estilos para o título da página */
+.page-title-container {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo sutil para o título */
+    margin-bottom: 30px;
+}
+
+.page-title-container h2 {
+    font-size: 3em;
+    color: #8a2be2; /* Roxo para destaque */
+    margin-bottom: 10px;
+}
+
+.page-title-container p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+}
+
+/* Estilos para o cabeçalho principal */
+.main-header {
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro semi-transparente para o cabeçalho */
+    padding: 20px 0;
+    width: 100%;
+    /* Se você tiver um background-image no body, pode usar backdrop-filter aqui */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px; /* Espaço entre o header e o conteúdo principal */
+}
+
+/* Contêiner para centralizar o conteúdo do cabeçalho */
+.header-content-centered {
+    max-width: 1200px; /* Largura máxima para o conteúdo centralizado */
+    margin: 0 auto; /* Centraliza o bloco na horizontal */
+    text-align: center; /* Centraliza o texto e elementos inline-block dentro */
+    display: flex; /* Para alinhar título e navegação */
+    flex-direction: column; /* Empilha o título e a navegação */
+    align-items: center; /* Centraliza itens flex na horizontal */
+    justify-content: center; /* Centraliza itens flex na vertical (se houver altura) */
+}
+/* Estilos para o cabeçalho principal */
+.main-header {
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro semi-transparente para o cabeçalho */
+    padding: 20px 0;
+    width: 100%;
+    /* Se você tiver um background-image no body, pode usar backdrop-filter aqui */
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px; /* Espaço entre o header e o conteúdo principal */
+}
+
+/* Contêiner para centralizar o conteúdo do cabeçalho */
+.header-content-centered {
+    max-width: 1200px; /* Largura máxima para o conteúdo centralizado */
+    margin: 0 auto; /* Centraliza o bloco na horizontal */
+    text-align: center; /* Centraliza o texto e elementos inline-block dentro */
+    display: flex; /* Para alinhar título e navegação */
+    flex-direction: column; /* Empilha o título e a navegação */
+    align-items: center; /* Centraliza itens flex na horizontal */
+    justify-content: center; /* Centraliza itens flex na vertical (se houver altura) */
+}
+
+
+
+/* Estilos gerais para o conteúdo principal da página de natureza */
+.main-content-nature {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo da página */
+}
+
+/* Estilo para o título "Meu Céu Estrelado" */
+.site-title-nature {
+    font-family: 'Arial Black', sans-serif; /* Ou outra fonte impactante, como a do "NATURE" */
+    font-size: 4em; /* Tamanho grande para destaque */
+    color: #FFFFFF; /* Cor branca para o texto */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    letter-spacing: 5px; /* Espaçamento entre as letras */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Sombra para o texto */
+    margin-bottom: 15px; /* Espaço entre o título e a navegação */
+    line-height: 1.2; /* Ajusta a altura da linha */
+}
+
+/* Estilos para a navegação */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para alinhar os itens de navegação na horizontal */
+    justify-content: center; /* Centraliza os itens de navegação */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+.main-nav ul li a {
+    color: #ADD8E6; /* Um azul claro para os links, ou a cor que preferir */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 15px 0;
+    }
+    .site-title-nature {
+        font-size: 3em; /* Reduz o tamanho da fonte em telas menores */
+        letter-spacing: 3px;
+    }
+    .main-nav ul {
+        flex-direction: column; /* Empilha os links de navegação */
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title-nature {
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+    .main-nav ul li a {
+        font-size: 1em;
+    }
+}
+
+/* Estilos para cada seção de carrossel */
+.carousel-section {
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro transparente para cada seção */
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px; /* Espaço entre as seções de carrossel */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.carousel-section h3 {
+    font-size: 2em;
+    color: #ffd700; /* Dourado para os títulos das seções */
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos específicos para os carrosséis da página nature.html */
+.carousel-container-nature {
+    position: relative;
+    max-width: 700px; /* Largura máxima dos carrosséis individuais */
+    width: 100%;
+    height: 400px; /* Altura fixa para todos os carrosséis */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin: 0 auto 20px; /* Centraliza e adiciona margem abaixo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333; /* Fundo fallback para o container do carrossel */
+}
+
+.carousel-slides-nature {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-slide-nature {
+    width: 100%;
+    height: 100%; /* Ocupa 100% da altura do container */
+    display: none;
+    object-fit: cover; /* Cobre a área sem distorcer */
+    border-radius: 10px;
+}
+
+.carousel-slide-nature.active {
+    display: block;
+}
+
+.carousel-button-nature {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 1.8em;
+    border-radius: 50%; /* Botões redondos */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.carousel-button-nature:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateY(-50%) scale(1.1); /* Pequeno efeito de zoom */
+}
+
+.carousel-button-nature.prev {
+    left: 15px;
+}
+
+.carousel-button-nature.next {
+    right: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .page-title-container h2 {
+        font-size: 2.5em;
+    }
+    .page-title-container p {
+        font-size: 1em;
+    }
+    .carousel-section h3 {
+        font-size: 1.8em;
+    }
+    .carousel-container-nature {
+        height: 300px; /* Altura menor para carrosséis em mobile */
+    }
+    .carousel-button-nature {
+        padding: 10px 14px;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title-container {
+        padding: 30px 15px 15px;
+    }
+    .page-title-container h2 {
+        font-size: 2em;
+    }
+    .carousel-section h3 {
+        font-size: 1.5em;
+    }
+    .carousel-container-nature {
+        height: 250px;
+    }
+    .carousel-button-nature {
+        padding: 8px 12px;
+        font-size: 1.2em;
+    }
+}

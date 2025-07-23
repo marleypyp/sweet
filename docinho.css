@@ -1,0 +1,242 @@
+/* Estilos do Body para o background verde */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-color: #6a9955; /* Um tom de verde */
+    display: flex; /* Para centralizar o main-content na tela */
+    flex-direction: column;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    color: #fff; /* Cor do texto padrão para contraste */
+}
+
+.header-link-title {
+    text-decoration: none;
+    color: #6a9955;
+}
+
+/* Garante que o main-content seja o container flexível principal */
+.main-content {
+    flex-grow: 1; /* Permite que ocupe o espaço restante */
+    display: flex; /* Transforma o main-content em um flex container */
+    justify-content: center; /* Centraliza o card-container horizontalmente */
+    align-items: center; /* Centraliza o card-container verticalmente */
+    padding: 20px; /* Adiciona um padding geral */
+}
+
+/* Estilo do Card Principal (Shadow Box) */
+.card-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco (compatibilidade varia) */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+    max-width: 900px; /* Largura máxima do card */
+    width: 95%; /* Adapta-se a telas menores */
+    overflow: hidden; /* Garante que nada saia das bordas arredondadas */
+    display: flex; /* Para layout do header e content dentro do card */
+    flex-direction: column;
+    padding: 20px; /* Padding interno para o card */
+    box-sizing: border-box;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+.card-header h3 {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que a imagem e o texto quebrem a linha em telas pequenas */
+    gap: 30px; /* Espaço entre a imagem e o texto */
+}
+
+.image-placeholder {
+    flex: 1; /* Ocupa espaço flexível */
+    min-width: 280px; /* Largura mínima para a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo para o placeholder da imagem */
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a imagem fique dentro do border-radius */
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Borda arredondada para a imagem */
+}
+
+.text-content {
+    flex: 2; /* Ocupa mais espaço que a imagem */
+    min-width: 300px; /* Largura mínima para o texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o texto */
+}
+
+.text-content h1 {
+    text-decoration: none !important;
+    font-size: 3em;
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.text-content h2 {
+    text-decoration: none;
+    font-size: 1.8em;
+    color: #e0e0e0;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Para botões quebrarem linha em telas pequenas */
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn.connect-btn {
+    background-color: #679353;; /* Exemplo de cor para o botão Gallery */
+    border-color: black;
+    font-weight: bold;
+}
+
+.btn.connect-btn:hover {
+    background-color: #7a1be0;
+    transition: 0.5s;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Media Query para telas menores (responsividade) */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Empilha header e content */
+        padding: 15px;
+    }
+
+    .card-content {
+        flex-direction: column; /* Empilha imagem e texto */
+        gap: 20px;
+    }
+
+    .card-header {
+        margin-bottom: 15px;
+    }
+
+    .text-content h1 {
+        text-decoration: none;
+        font-size: 2.5em;
+    }
+
+    .text-content h2 {
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+
+    .text-content p {
+        text-decoration: none;
+        font-size: 1em;
+    }
+
+    .buttons {
+        justify-content: center; /* Centraliza botões em telas pequenas */
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        padding: 10px;
+    }
+
+    .text-content h1 {
+        text-decoration: none;
+        font-size: 2em;
+    }
+
+    .text-content h2 {
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+
+    .menu-icon .bar {
+        width: 20px;
+        height: 2px;
+    }
+}
+
+@media (min-width: 900px) {
+    .header-container {
+        display: flex;
+        align-items: center;
+        margin:auto;
+    }
+
+    .buttons{
+        padding: 20px;
+    }
+
+    .site-title {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        margin-top:20px;
+    }
+
+}
